@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-
+using AlbumCollection.Repositories;
+using AlbumCollection.Models;
 namespace AlbumCollection
 {
     public class Startup
@@ -14,9 +15,11 @@ namespace AlbumCollection
        
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+            services.AddScoped<IAlbumRepository, AlbumRepository>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -24,9 +27,12 @@ namespace AlbumCollection
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
+       
+            app.UseMvc(routes =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Album}/{action=Index}/{id?}");
             });
         }
     }

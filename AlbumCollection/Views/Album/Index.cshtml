@@ -1,0 +1,11 @@
+﻿@model IEnumerable<AlbumCollection.Models.Album>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>HI You are IN Album's Index Page </h2>
+@foreach (var album in Model)
+{
+   <h1>@album.Name</h1>
+   <h2>@album.Artist_Name</h2>
+}
