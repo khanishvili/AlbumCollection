@@ -1,0 +1,14 @@
+﻿@model AlbumCollection.Models.Album
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Model.Artist_Name</h2>
+
+@foreach (var song in Model.Songs)
+{
+    <h1>@song.Song_Name</h1>
+    <h2>@song.SongId</h2>
+}
+
+ <h1><a href="/Song/Create">Add_Song</a></h1>

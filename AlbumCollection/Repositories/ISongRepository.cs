@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 using AlbumCollection.Models;
 namespace AlbumCollection.Repositories
 {
-   public  interface IAlbumRepository
+    public interface ISongRepository
     {
-        IEnumerable<Album> GetAll();
-        Album GetById(int Id);
+        void Create(Song song);
     }
 }

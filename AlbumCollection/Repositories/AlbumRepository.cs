@@ -8,9 +8,19 @@ namespace AlbumCollection.Repositories
 {
     public class AlbumRepository : IAlbumRepository
     {
+        AlbumContext db;
+        public AlbumRepository(AlbumContext db)
+        {
+            this.db = db;
+        }
         public IEnumerable<Album> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Albums.ToList();
+        }
+
+        public Album GetById(int Id)
+        {
+            return db.Albums.Single(album => album.AlbumId == Id);
         }
     }
 }

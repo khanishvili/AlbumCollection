@@ -16,7 +16,9 @@ namespace AlbumCollection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<AlbumContext>();
             services.AddScoped<IAlbumRepository, AlbumRepository>();
+            services.AddScoped<ISongRepository, SongRepository>();
         }
 
 
@@ -27,7 +29,7 @@ namespace AlbumCollection
                 app.UseDeveloperExceptionPage();
             }
 
-       
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
