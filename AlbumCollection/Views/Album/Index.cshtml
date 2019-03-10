@@ -4,8 +4,9 @@
 }
 
 <h2>HI You are IN Album's Index Page </h2>
+
 @foreach (var album in Model)
 {
-   <h1>@album.Name</h1>
+   <a href="/Album/Details/@album.AlbumId"> <h1>@album.Name</h1></a>
    <h2>@album.Artist_Name</h2>
 }

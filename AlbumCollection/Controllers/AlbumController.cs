@@ -23,5 +23,10 @@ namespace AlbumCollection.Controllers
            var  albumModel = repo.GetAll();
             return View(albumModel);
         }
+        public ViewResult Details(int Id)
+        {
+            var model = repo.GetById(Id);
+            return View(model);
+        }
     }
 }

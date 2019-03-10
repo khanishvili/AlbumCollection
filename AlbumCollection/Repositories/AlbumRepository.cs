@@ -17,5 +17,10 @@ namespace AlbumCollection.Repositories
         {
             return db.Albums.ToList();
         }
+
+        public Album GetById(int Id)
+        {
+            return db.Albums.Single(album => album.AlbumId == Id);
+        }
     }
 }
