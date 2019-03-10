@@ -8,6 +8,6 @@ namespace AlbumCollection.Repositories
    public  interface IAlbumRepository
     {
         IEnumerable<Album> GetAll();
-
+        
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 using AlbumCollection.Repositories;
-using Microsoft.AspNetCore.Mvc;
+using AlbumCollection.Models;
+
 
 namespace AlbumCollection.Controllers
 {
@@ -16,10 +18,10 @@ namespace AlbumCollection.Controllers
             this.repo = repo;
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            var model = repo.GetAll();
-            return View(model);
+           var  albumModel = repo.GetAll();
+            return View(albumModel);
         }
     }
 }
