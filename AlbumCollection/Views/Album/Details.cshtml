@@ -13,13 +13,15 @@
 </head>
 <body>
     <header>
-        <section style="align-content: center">
-            <h1><a href="/Song/Create">Add Song</a></h1>
-        </section>
+        <center>
+            <ul>
+                <li> <h1><a href="/Song/Create"><input type="submit" value="Add Song" /></a></h1></li>
+            </ul>
+        </center>
     </header>
     <main>
-      
-        <h2>@Model.Artist_Name</h2>
+
+        <h2 style="justify-content:center">@Model.Artist_Name</h2>
         <ul class="songs" id="sevenfold">
             @foreach (var song in Model.Songs)
             {
@@ -27,10 +29,11 @@
                     <h3>@song.Song_Name</h3>
                     <h2>@song.SongId</h2>
                 </li>
-            }
-        </ul>
 
-    </main>
+            }
+
+        </ul>
+        </main>
 
 </body>
 </html>

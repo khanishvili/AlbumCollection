@@ -11,6 +11,10 @@ body {
     color: #fff;
     text-align: right;
 }
+header  
+{ display: block;
+   align-items:center;
+}
 
 .songs {
     text-align: left;
@@ -18,7 +22,7 @@ body {
     margin: 0;
 }
 
-    .songs li {
+.songs li {
         padding: 1em;
         margin-bottom: .125em;
         display: block;
@@ -26,18 +30,18 @@ body {
         text-transform: uppercase;
     }
 
-    .songs li {
+.songs li {
         visibility: hidden;
         animation: rolldown .7s 1;
         transform-origin: 50% 0;
         animation-fill-mode: forwards;
     }
 
-        .songs li:nth-child(2n) {
+.songs li:nth-child(2n) {
             background-color: #301717;
         }
 
-        .songs li:nth-child(2n+1) {
+.songs li:nth-child(2n+1) {
             background-color: #39284d;
         }
 
@@ -47,7 +51,6 @@ body {
     left: 50%;
     margin-left: -25%;
 }
-
 
 
 @keyframes rolldown {
