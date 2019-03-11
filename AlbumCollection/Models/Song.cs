@@ -8,9 +8,9 @@ namespace AlbumCollection.Models
 {
     public class Song
     {
-        [Required]
+        
         public int SongId { get; set; }
-        [Required]
+        
         public string Song_Name { get; set; }
         
         public virtual int AlbumId { get; set; }

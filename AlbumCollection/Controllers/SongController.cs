@@ -10,7 +10,7 @@ namespace AlbumCollection.Controllers
     public class SongController : Controller
     {
         ISongRepository repo;
-
+        
        public SongController(ISongRepository repo)
         {
             this.repo = repo;
@@ -18,6 +18,7 @@ namespace AlbumCollection.Controllers
         [HttpGet]
         public ViewResult Create(int id)
         {
+           
             var model = new Song() { AlbumId = id };
             return View(model);
         }
@@ -25,7 +26,7 @@ namespace AlbumCollection.Controllers
         public IActionResult Create(Song song)
         {
             repo.Create(song);
-            return RedirectToAction("../Album/Details/" + song.AlbumId);
+            return RedirectToAction("../Album/Details/"+song.AlbumId);
         }
     }
 }
