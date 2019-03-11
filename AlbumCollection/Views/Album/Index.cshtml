@@ -8,18 +8,27 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/Style/Album.css" rel="stylesheet" />
+    <link href="~/Style/main.css" rel="stylesheet" />
 </head>
 <body>
 
-    <h2>HI You are IN Album's Index Page </h2>
+    <h2> </h2>
+    <div class="container">
+        @foreach (var album in Model)
+        {
+            @*<a href="/Album/Details/@album.AlbumId"> <h1>@album.Name</h1></a>
+                <h2>@album.Artist_Name</h2>*@
 
-    @foreach (var album in Model)
-    {
-        <a href="/Album/Details/@album.AlbumId"> <h1>@album.Name</h1></a>
-        <h2>@album.Artist_Name</h2>
-    }
+            <div class="album">
+                <span>@album.Artist_Name</span>
+                <a href="/Album/Details/@album.AlbumId">
+                    <img src="https://source.unsplash.com/1000x800">
+                    </a>
+                    <span>@album.Name</span>
+</div>
 
+        }
+        </div>
 
 
 
