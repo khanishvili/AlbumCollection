@@ -21,7 +21,6 @@ namespace AlbumCollection
             services.AddScoped<ISongRepository, SongRepository>();
         }
 
-
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

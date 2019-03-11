@@ -12,22 +12,25 @@
 
 </head>
 <body>
-    <main>
-        <section class="list">
-            <h2>@Model.Artist_Name</h2>
-            <ul class="songs" id="sevenfold">
-                @foreach (var song in Model.Songs)
-                {
-                    <li>
-                        <h3>@song.Song_Name</h3>
-                        <h2>@song.SongId</h2>
-                    </li>
-                }
-            </ul>
+    <header>
+        <section style="align-content: center">
+            <h1><a href="/Song/Create">Add Song</a></h1>
         </section>
+    </header>
+    <main>
+      
+        <h2>@Model.Artist_Name</h2>
+        <ul class="songs" id="sevenfold">
+            @foreach (var song in Model.Songs)
+            {
+                <li>
+                    <h3>@song.Song_Name</h3>
+                    <h2>@song.SongId</h2>
+                </li>
+            }
+        </ul>
+
     </main>
-    <section>
-        <h1><a href="/Song/Create">Add_Song</a></h1>
-    </section>
+
 </body>
 </html>

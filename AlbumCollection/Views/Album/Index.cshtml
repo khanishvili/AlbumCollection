@@ -12,19 +12,17 @@
 </head>
 <body>
 
-    <h2> </h2>
+    <h2> Wellcome to Music Web Site </h2>
     <div class="container">
         @foreach (var album in Model)
         {
-            @*<a href="/Album/Details/@album.AlbumId"> <h1>@album.Name</h1></a>
-                <h2>@album.Artist_Name</h2>*@
 
             <div class="album">
-                <span>@album.Artist_Name</span>
+                <span>@album.Name</span>
                 <a href="/Album/Details/@album.AlbumId">
-                    <img src="https://source.unsplash.com/1000x800">
-                    </a>
-                    <span>@album.Name</span>
+                    <img src="~/img/sevenfold.jpg" />
+                </a>
+                <span>@album.Artist_Name</span>
 </div>
 
         }

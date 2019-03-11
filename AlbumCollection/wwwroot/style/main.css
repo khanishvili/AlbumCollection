@@ -1,4 +1,7 @@
-﻿.container {
+﻿body {
+    background: #444;
+}
+.container {
     display: flex;
     width: 100%;
     padding: 4% 2%;
@@ -32,9 +35,25 @@
 
     .album:hover {
         flex: 1 1 50%;
+        border: 2px solid black;
     }
 
         .album:hover > img {
             width: 100%;
             height: 100%;
         }
+    .album span
+    {
+        color:chocolate;
+        text-align:center;
+        padding:50%,1em;
+        font-size: 20px;
+
+    }
+    .album:hover >span
+    {
+        font-size:25px;
+        padding: 10px,30px;
+        background-color:black;
+        color:white;
+    }
